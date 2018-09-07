@@ -5,11 +5,15 @@ import Panel from '../components/Panel'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
-      path:'/',component: Panel
+      path:'/',component: Panel,name:'panel'
     },
-    {path: '/single/:userId', component: Single,name:'single'}
+    {
+      path: '/single/:userId', component: Single,name:'single'
+    },
+    {
+      path: '/goBack', redirect:'/'
+    }
   ]
 })

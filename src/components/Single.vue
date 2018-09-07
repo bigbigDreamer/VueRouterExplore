@@ -26,22 +26,13 @@
             topic:''
           }
        },
-      mounted(){
-        console.log('开始订阅')
-         this.content1 = this.$route.params.content
-         this.topic = this.$route.params.topic
-        console.log(this.$route.params.topic)
-        this.$pub.subscribe('data',(msg,content)=>{
-          console.log('bug通过了')
-          this.content1 = content
-        })
-        console.log('订阅结束')
-      },
-      beforeCreate(){
-         console.log('6446464')
+     created(){//此处只是测试一下而已，我的猜测以及常规套路是正确的
+        // console.log('6446464')
         this.$pub.subscribe('d',(msg,content)=>{
-          console.log('bug通过了')
-          this.content1 = content
+         //console.log('bug通过了')
+        //console.log(content)
+          this.topic = content.topic;
+          this.content1=content.content
         })
       }
     }

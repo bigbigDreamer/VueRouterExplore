@@ -27,8 +27,8 @@
     },
     methods: {
       handleClick(index) {
-        this.$router.push({ name: 'single',params: { userId: index,content: this.$refs.li[index].innerText,topic:this.Persons[index].topic}})
-        this.$pub.publish('d',this.$refs.li[index].innerHTML)
+        this.$router.push({ name: 'single',params: { userId: index }})
+        this.$pub.publish('d',{content:this.$refs.li[index].innerText,topic:this.Persons[index].topic})
       }
     },
     mounted(){

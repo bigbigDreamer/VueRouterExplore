@@ -43,8 +43,8 @@
       </el-col>
     </el-row>
     <el-row class="body">
-      <keep-alive>
-        <router-view></router-view>
+      <keep-alive exclude="single">
+        <router-view ></router-view>
       </keep-alive>
     </el-row>
     <el-row class="footer">
@@ -89,7 +89,7 @@
         return this.dialogVisible = false
       },
       back(){
-        this.$router.push({path:'/'})
+        this.$router.push({path:'/goBack'})
       }
     },
     components: {
