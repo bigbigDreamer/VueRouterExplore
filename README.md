@@ -143,6 +143,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
        exclude的优先级大于include
        也就是说：当include和exclude同时存在时，exclude生效，include不生效。
        ##当组件被exclude匹配，该组件将不会被缓存，不会调用activated 和 deactivated。
+       ...
    ```
    -----》完整Vue生命周期[参考地址](https://blog.csdn.net/Honnyee/article/details/81162036)
 >短期感悟
